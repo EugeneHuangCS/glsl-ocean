@@ -132,7 +132,7 @@ vec3 getSeaColor(vec3 p, vec3 n, vec3 l, vec3 eye, vec3 dist) {
 
 // tracing
 vec3 getNormal(vec3 p, float eps) {
-    vec3 n
+    vec3 n;
     n.y = map_detailed(p);    
     n.x = map_detailed(vec3(p.x+eps,p.y,p.z)) - n.y;
     n.z = map_detailed(vec3(p.x,p.y,p.z+eps)) - n.y;
