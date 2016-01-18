@@ -1,7 +1,9 @@
 /*
 * Ocean
 *
-* Ocean Shader
+* Ocean shader with hight map and ray-tracing
+*
+* 2016 Yuzo(Huang Yuzhong)
 *
 */
 
@@ -17,7 +19,7 @@
 #pragma comment(lib, "glu32.lib")
 #pragma comment(lib, "glfw3.lib")
 #pragma comment(lib, "glew32.lib")
-//#pragma comment(linker, "/SUBSYSTEM:windows /ENTRY:mainCRTStartup")
+#pragma comment(linker, "/SUBSYSTEM:windows /ENTRY:mainCRTStartup")
 #else
 #include <GL/glxew.h>
 #endif
@@ -52,7 +54,7 @@ int main(int argc, char* argv[]) {
 	glfwWindowHint(GLFW_CONTEXT_VERSION_MINOR, 3);
 	glfwWindowHint(GLFW_OPENGL_PROFILE, GLFW_OPENGL_CORE_PROFILE);
 
-	GLFWwindow* window = glfwCreateWindow(windowWidth, windowHeight, "Flocking", NULL, NULL);
+	GLFWwindow* window = glfwCreateWindow(windowWidth, windowHeight, "Ocean", NULL, NULL);
 	if (!window) throw runtime_error("Failed to open GLFW window");
 
 	glfwMakeContextCurrent(window);

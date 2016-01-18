@@ -120,6 +120,7 @@
     <Text Include="Makefile" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="README.md" />
     <None Include="shader\canvas.frag" />
     <None Include="shader\canvas.vert" />
   </ItemGroup>
